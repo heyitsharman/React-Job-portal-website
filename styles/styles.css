@@ -99,7 +99,7 @@ header{
 }
 
 .header-title  em{
-    color: var(--primaryColor);
+    color: var(--greyColor);
 }
 
 /* search box */
@@ -137,7 +137,7 @@ header{
 
 .search-button{
     width: 200px;
-    background: var(--primaryColor);
+    background: var(--blackColor);
     border: none;
     color: var(--whiteColor);
     cursor: pointer;
@@ -184,7 +184,7 @@ header{
 }
 
 .chosen-card{
-    background: var(--primaryColor);
+    background: var(--blackColor);
     padding: 0.2rem 0.5rem;
     border-radius: 20px;
     color: var(--whiteColor);
@@ -231,7 +231,7 @@ header{
 }
 
 .job-detail h1 {
-    color: var(--dark);
+    color: var(--light);
     margin: 1rem;
 }
 
@@ -260,21 +260,8 @@ header{
 }
 
 .job-label span i{
-    color: var(--primaryColor);
+    color: var(--blackColor);
     margin: 0.4rem;
-}
-
-.label-a{
-    background-color: var(--yellowColor);
-
-}
-
-.label-b{
-    background-color: var(--primaryColor);
-}
-
-.label-c{
-    background-color: var(--blackColor);
 }
 /* 
 .job-posted{
@@ -286,42 +273,42 @@ header{
     color: var(--light);
 }
 .job-posted p i {
-    color: var(--primaryColor);
+    color: var(--dark);
     margin: 1rem;
     font-size: 1rem;
 }
 
 .job-details {
     display: block;
-    padding: 0.4rem 1.5rem;
+    padding: 0.6rem 1.3rem;
     margin: 20px auto;
     width: 200px;
     background-color: transparent;
-    color: var(--primaryColor);
-    border: 1px solid var(--primaryColor);
+    color: var(--blackColor);
+    border: 1px solid var(--blackColor);
     border-radius: 20px;
     cursor: pointer;
 }
 
 .job-details:hover{
-    background-color: var(--primaryColor);
-    color: var(--whiteColor);
+    background-color: var(--blackColor);
+    color: var(--greyColor);
 }
 
 .job-more{
     display: block;
-    padding: 0.3rem 2rem;
+    padding: 0.6rem 2rem;
     margin: 20px auto;
     width: 250px;
     background-color: transparent;
-    color: var(--primaryColor);
-    border: 1px solid var(--primaryColor);
+    color: var(--blackColor);
+    border: 1px solid var(--blackColor);
     border-radius: 20px;
     cursor: pointer;
 }
 .job-more:hover{
     color: white;
-    background-color: var(--primaryColor);
+    background-color: var(--blackColor);
 }
 
 /* join bannner */
@@ -348,7 +335,7 @@ header{
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(180deg, rgba(0, 85, 177, 0.6) 0%, rgba(0, 122, 255, 0.5) 100%), linear-gradient(180deg, rgba(0, 122 , 255,0.65) 0%,transparent 100%);
+    background: linear-gradient(180deg, rgba(7, 25, 44, 0.6) 0%, rgba(88, 93, 99, 0.5) 100%), linear-gradient(180deg, rgba(58, 63, 69, 0.65) 0%,transparent 100%);
     z-index: 1;
 }
 
@@ -360,6 +347,7 @@ header{
 }
 
 .join-detail > h1{
+    color:var(--greyColor);
     font-size: 36px;
     letter-spacing: 2;
 }
@@ -390,7 +378,7 @@ header{
 }
 
 .featured h1 {
-    color: var(--dark);
+    color: var(--light);
 }
 
 .section-title {
@@ -427,14 +415,93 @@ header{
 }
 
 .featured-btn{
-    border: 1px solid var(--primaryColor);
+    border: 1px solid var(--blackColor);
     background-color: transparent;
     padding: 3px 10px;
     cursor: pointer;
-    color: var(--primaryColor);
+    color: var(--blackColor);
 }
 
 .featured-btn:hover{
-    background-color: var(--primaryColor);
-    color: var(--whiteColor);
+    background-color: var(--blackColor);
+    color: var(--greyColor);
+}
+
+/* testimonials */
+.container {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0 15px;
+}  
+
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header .title {
+    font-size: 35px;
+    color: var(--light);
+    font-weight: 600;
+    text-transform: capitalize;
+    color: hs1(0, 0%, 100%);
+    line-height: 1.2;
+}
+
+.testimonials {
+    padding: 100px 0;
+}
+
+.testimonials-item {
+    background-color: var(--greyColor);
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.testimonials-item .info {
+    display: flex;
+    align-items: center;
+}
+.testimonials-item img{
+    max-width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    vertical-align: middle;
+}
+
+.testimonials-item .name{
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: --var(dark);
+    line-height: 1.2;
+}
+
+.testimonials-item .job{
+    text-transform: capitalize;
+    color: var(--light);
+}
+
+.testimonials-item p{
+    margin-top: 20px;
+    color: var(--light);
+}
+
+.testimonials-item .rating{
+    margin-top: 15px;
+    font-size: 14px;
+    color: hs1(36,saturation, lightness);
+}
+
+.testimonials .swiper-pagination{
+    position: relative;
+    margin-top: 40px;
+    bottom: auto;
+}
+
+.testimonials .swiper-pagination-bullet{
+    height: 12px;
+    width: 12px;
+    background-color: var(--blackColor);
 }
