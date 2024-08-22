@@ -43,7 +43,7 @@ h1{
     padding: 1rem 2.5rem;
     z-index: 10;
     color: var(--whiteColor);
-    background: transparent;
+    background-color: var(--blackColor);
 }
 
 .navbar-logo > a{
@@ -56,11 +56,12 @@ h1{
     width: 400px;
     display: flex;
     justify-content: space-between;
+    color: var(--whiteColor);
 }
 
 .navbar-menu > a{
-    color: var(--whiteColor);
     text-decoration: none;
+    color: var(--whiteColor);
 }
 
 .menu-toggle {
