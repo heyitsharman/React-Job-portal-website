@@ -139,6 +139,7 @@ input:valid ~i
 .links a:hover{
     font-size: 1.2rem;
 }
+
 a{
     color: #fff;
     text-decoration: none;
@@ -158,9 +159,11 @@ input[type="submit"]:hover{
     background-color: #000;
     color: #fff;
 }
+
 @media (max-width: 600px){
     section span{
         width: calc(20vw - 2px);
         height: calc(20vw 2px);
     }
 }
+
