@@ -251,10 +251,11 @@ header{
 .job-detail h1 {
     color: var(--light);
     margin: 1rem;
+    font-size: 1.9rem;
 }
 
 .job-detail h3 {
-    color: var(--dark);
+    color: var(--light);
     margin: 0.5rem 1rem;
 }
 
@@ -421,6 +422,13 @@ header{
     padding: 1rem;
     background-color: var(--whiteColor);
     box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
+}
+
+.featured-card p{
+    font-size: 1.3rem;
+    color: var(--light);
+    padding: 1rem;
+    font-weight: 700;
 }
 
 .featured-card:hover{
