@@ -453,10 +453,20 @@ header{
     padding: 100px 0;
 }
 
+.testimonials-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
 .testimonials-item {
     background-color: var(--greyColor);
     padding: 30px;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonials-item .info {
@@ -495,17 +505,6 @@ header{
     color: hs1(36,saturation, lightness);
 }
 
-.testimonials .swiper-pagination{
-    position: relative;
-    margin-top: 40px;
-    bottom: auto;
-}
-
-.testimonials .swiper-pagination-bullet{
-    height: 12px;
-    width: 12px;
-    background-color: var(--blackColor);
-}
 
 /* blog section */
 .blog{
