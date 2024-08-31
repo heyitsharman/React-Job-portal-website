@@ -470,10 +470,20 @@ header{
     padding: 100px 0;
 }
 
+.testimonials-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
 .testimonials-item {
     background-color: var(--greyColor);
     padding: 30px;
     border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonials-item .info {
@@ -627,6 +637,4 @@ footer{
 
 .footer-wrapper a:hover{
     text-decoration: underline;
-}
-
 
