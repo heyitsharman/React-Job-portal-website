@@ -24,11 +24,12 @@ body{
     height: auto;
     font-family: "Heebo", sans-serif;
     font-weight: 400;
-    
+
 }
 
 h1{
     line-height: 1.5;
+    font-size: 2.5rem;
 }
 
 /* navbar */
@@ -46,6 +47,7 @@ h1{
     background-color: var(--blackColor);
 }
 
+
 .navbar-logo > a{
     letter-spacing: 2.5;
     text-decoration: none;
@@ -57,6 +59,21 @@ h1{
     display: flex;
     justify-content: space-between;
     color: var(--whiteColor);
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .menu-companies,
+    .menu-jobs{
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-menu {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .navbar-menu > a{
@@ -234,10 +251,11 @@ header{
 .job-detail h1 {
     color: var(--light);
     margin: 1rem;
+    font-size: 1.9rem;
 }
 
 .job-detail h3 {
-    color: var(--dark);
+    color: var(--light);
     margin: 0.5rem 1rem;
 }
 
@@ -394,7 +412,7 @@ header{
     gap: 2rem;
     align-items: center;
     width: 100%;
-    padding: 2% 10%;
+    padding: 2% 5%;
 }
 
 .featured-card {
@@ -406,12 +424,24 @@ header{
     box-shadow: rgba(0,0,0,0.16) 0px 1px 4px;
 }
 
+.featured-card p{
+    font-size: 1.3rem;
+    color: var(--light);
+    padding: 1rem;
+    font-weight: 700;
+}
+
 .featured-card:hover{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .featured-image {
-    height: 30px;
+    /* height: 30px;
+    object-fit: cover; */
+    max-width: 100px; /* Maximum width */
+    max-height: 80px; /* Maximum height */
+    width: 100%; /* Ensures responsiveness */
+    height: auto; 
     margin-bottom: 0.2rem;
 }
 
@@ -504,7 +534,6 @@ header{
     font-size: 14px;
     color: hs1(36,saturation, lightness);
 }
-
 
 /* blog section */
 .blog{
