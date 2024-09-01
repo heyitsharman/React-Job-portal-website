@@ -24,7 +24,7 @@ body{
     height: auto;
     font-family: "Heebo", sans-serif;
     font-weight: 400;
-
+    overflow-x: hidden;
 }
 
 h1{
@@ -645,4 +645,6 @@ footer{
 
 .footer-wrapper a:hover{
     text-decoration: underline;
+}
+
 
