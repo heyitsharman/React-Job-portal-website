@@ -136,6 +136,10 @@ input:valid ~i
     justify-content: space-between;
 }
 
+.links a:hover{
+    font-size: 1.2rem;
+}
+
 a{
     color: #fff;
     text-decoration: none;
@@ -149,6 +153,11 @@ input[type="submit"]{
     font-size: 1.25em;
     letter-spacing: 0.05em;
     cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #000;
+    color: #fff;
 }
 
 @media (max-width: 600px){
