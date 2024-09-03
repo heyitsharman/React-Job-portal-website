@@ -25,190 +25,21 @@
     <nav class="navbar">
         <h2 class="navbar-logo"><a href="#">Jobact</a></h2>
         <div class="navbar-menu">
-            <a href="index.html">Home</a>
-            <a href="#companies" class="menu-companies">Companies</a>
-            <a href="#jobs" class="menu-jobs">Jobs</a>
-            <a href="blogs.html">Blogs</a>
-            <a href="login.html">Sign In</a>
-        </div>
-        <div class="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+            <a href="index.html" class="hide">Home</a>
+            <a href="#jobs" class="hide">Jobs</a>
+            <a href="" class="hide">contact</a>
+            <a href="" class="hide">About</a>
+            <a href="" class="nav-btn">Login</a>
+            <a href="" class="nav-btn">Register</a>
         </div>
     </nav>
-    <!-- header -->
-     <header>
-        <h1 class="header-title" id="home">
-            FIND YOUR <br> <em>PERFECT JOB</em> 
-            <br> EASILY
-        </h1>
-     </header>
-
-     <!-- search -->
-      <div class="search-wrapper">
-        <div class="search-box">
-            <div class="search-card">
-                <input class="search-input" type="text" placeholder="Job title or keywords">
-                <button class="search-button">Search</button>
-            </div>
-        </div>
-      </div>
-
-      <!-- filter box -->
-       <div class="filter-box">
-        <div class="filterdropdown">
-            <select name="job-level" id="job-level" class="filter-select">
-                <option>Job level</option>
-                <option>Entry</option>
-                <option>Mid-senior</option>
-                <option>Senior</option>
-            </select>
-            <select class="filter-select" id="job-function" name="job-function">
-                <option>Job Function</option>
-                <option>IT</option>
-                <option>Management</option>
-                <option>Education</option>
-            </select>
-            <select class="filter-select" id="employment" name="employment">
-                <option>Employement Types</option>
-                <option>Internship</option>
-                <option>Part time</option>
-                <option>Full Time</option>
-            </select>
-            <select class="filter-select" id="location" name="location">
-                <option>Location</option>
-                <option>Remote</option>
-                <option>US</option>
-                <option>UK</option>
-            </select>
-            <select class="filter-select" id="education" name="education">
-                <option>Education</option>
-                <option>High School</option>
-                <option>Bachelor's Degree</option>
-                <option>Master's Degree</option>
-            </select>
-        </div>
-
-        <div class="filter-chosen">
-            <div class="chosen-card">
-                remote <i class="fas fa-times-circle"></i>
-            </div>
-            <div class="chosen-card">
-                Full Time <i class="fas fa-times-circle"></i>
-            </div>
-            <div class="chosen-card">
-                Financial Tech<i class="fas fa-times-circle"></i>
-            </div>
-            <div class="chosen-card">
-                Entry Level <i class="fas fa-times-circle"></i>
-            </div>
-        </div>
-       </div>
-
-       <!-- job listing -->
-        <section class="job-list" id="jobs">
-            <h1 class="job-listings">Job Listings</h1>
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="assets/ebay.png">
-                    <div class="job-detail">
-                        <h1>Ebay</h1>
-                        <h3>Buisness Development</h3>
-                        <div class="job-label">
-                            <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>New York, USA</span>
-                            <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
-                            <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>$123 - $456</span>
-                        </div>
-                    </div>
-                </div>
-               
-                <div class="job-posted">
-                    <button class="job-details">More Details</button>
-                    <p><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</p>
-                </div>
-            </div>
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="assets/tesla.svg">
-                    <div class="job-detail">
-                        <h1>Tesla</h1>
-                        <h3>Mechanical Engineer</h3>
-                        <div class="job-label">
-                            <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>New York, USA</span>
-                            <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
-                            <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>$123 - $456</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-posted">
-                    <button class="job-details">More Details</button>
-                    <p><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</p>
-                </div>
-            </div>
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="assets/microsoft-logo.svg">
-                    <div class="job-detail">
-                        <h1>Microsoft</h1>
-                        <h3>Digital Marketing</h3>
-                        <div class="job-label">
-                            <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>New York, USA</span>
-                            <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
-                            <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>$123 - $456</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-posted">
-                    <button class="job-details">More Details</button>
-                    <p><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</p>
-                </div>
-            </div>
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="assets/youtube.png">
-                    <div class="job-detail">
-                        <h1>Youtube</h1>
-                        <h3>UI UX Designer</h3>
-                        <div class="job-label">
-                            <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>New York, USA</span>
-                            <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
-                            <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>$123 - $456</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-posted">
-                    <button class="job-details">More Details</button>
-                    <p><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</p>
-                </div>
-            </div>
-            <div class="job-card">
-                <div class="job-name">
-                    <img class="job-profile" src="assets/Amazon.wine.svg">
-                    <div class="job-detail">
-                        <h1>Amazon</h1>
-                        <h3>Software Engineer</h3>
-                        <div class="job-label">
-                            <span class="text-truncate me-3"><i class="fa fa-map-marker-alt text-primary me-2"></i>New York, USA</span>
-                            <span class="text-truncate me-3"><i class="far fa-clock text-primary me-2"></i>Full Time</span>
-                            <span class="text-truncate me-0"><i class="far fa-money-bill-alt text-primary me-2"></i>$123 - $456</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="job-posted">
-                    <button class="job-details">More Details</button>
-                    <p><i class="far fa-calendar-alt text-primary me-2"></i>Date Line: 01 Jan, 2045</p>
-                </div>
-            </div>
-            <button class="job-more">More list</button>
-        </section>
-
+    
         <!-- join details section -->
         <section class="join">
             <div class="join-detail">
-                <h1 class="section-title">LETS START YOUR NEW JOB WITH US</h1>
+                <h1 class="section-title">START YOUR NEW JOB WITH US</h1>
             </div>
-            <button class="join-btn">Join now</button>
+            <button class="join-btn">Browse Jobs</button>
         </section>
 
         <!-- featured companies -->
