@@ -5,40 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar">
-        <h2 class="navbar-logo"><a href="#">Jobact</a></h2>
-        <div class="navbar-menu">
-            <a href="index.html">Home</a>
-
-            <a href="#companies">Companies</a>
-            <a href="#jobs">Jobs</a>
-            <a href="#blog">Blogs</a>
-            <a href="login.html">Sign In</a>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Jobact</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item" >
+                <a class="nav-link fs-5" aria-current="page" href="index.html" fs-6>Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="jobs.html">Jobs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 active" href="#">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5" href="login.html">Sign In</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div class="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
-    
-    <nav class="navbar">
-        <h2 class="navbar-logo"><a href="#">Jobact</a></h2>
-        <div class="navbar-menu">
-          <a href="index.html">Home</a>
-            <a href="#companies">Companies</a>
-            <a href="#jobs">Jobs</a>
-            <a href="#blog">Blogs</a>
-            <a href="login.html">Sign In</a>
-        </div>
-        <div class="menu-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </div>
-    </nav>
+      </nav>
     
     <section class="blog" id="blog">
         <h1 class="section-title">Career Advices</h1>
