@@ -37,7 +37,7 @@ h1{
     background: rgb(3 7 18); 
   }
 .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 /* join bannner */
@@ -152,11 +152,13 @@ h1{
 }
 
 .featured-btn{
-    border: 1px solid var(--blackColor);
-    background-color: transparent;
+    border: 1px solid;
+    background-color: var(--blackColor);
+    border-radius: 10px;
     padding: 3px 10px;
     cursor: pointer;
-    color: var(--blackColor);
+    color: white;
+
 }
 
 .featured-btn:hover{
@@ -192,7 +194,7 @@ h1{
 .testimonials-content {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 15px;
 }
 
 
@@ -375,8 +377,6 @@ footer{
     color: white;
 }
 
-<<<<<<< HEAD
-=======
 .designer{
     opacity: 0.7;
     text-transform: uppercase;
@@ -395,4 +395,3 @@ footer{
       margin: 10px;
     }
 }
->>>>>>> b15c53eecb76ceca92ddc04445daea4c8fe1d704
