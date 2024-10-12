@@ -23,7 +23,7 @@
                 <a class="nav-link fs-5 active" href="jobs.html">Jobs</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5" href="#">About</a>
+                <a class="nav-link fs-5" href="about.html">About</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link fs-5" href="#">Contact</a>
@@ -36,64 +36,91 @@
         </div>
       </nav>
 
-    <div class="container mt-5">
+    <!-- Search bar -->
+      <div class="container mt-5">
         <div class="row justify-content-center">
-          <div class="col-md-6">
+          <div class="col-md-8">
+            <h2 class="heading">FIND YOUR DREAM JOB NOW</h2>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <a href="#" class="btn apply-btn">Search</a>
             </form>
           </div>
         </div>
       </div>
 
-      <div class="container mt-5 d-flex justify-content-center flex-column align-items-center">
-        <!-- Job Card 1 -->
-        <div class="job-card d-flex justify-content-between align-items-center">
-          <div class="d-flex">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" class="company-logo me-3">
-            <div>
-              <h5 class="mb-1">Software Engineer</h5>
-              <h6 class="text-muted mb-2">Google</h6>
-              <p>Google is seeking a talented and innovative Software Engineer to...</p>
-              <div class="text-muted">06-09-2023 | internship | Bengaluru, India</div>
-            </div>
-          </div>
-          <a href="#" class="btn apply-btn">Apply</a>
-        </div>
+      <!-- Main Section -->
+      <div class="container mt-5">
+        <div class="row">
+          <!-- Categories Filter Section -->
+          <div class="col-lg-3 col-md-4 filter-section">
+            <h5>Categories</h5>
+            <ul class="category-list">
+              <li>Technology</li>
+              <li>Marketing</li>
+              <li>Finance</li>
+              <li>Sales</li>
+              <li>Legal</li>
+            </ul>
     
-        <!-- Job Card 2 -->
-        <div class="job-card d-flex justify-content-between align-items-center">
-          <div class="d-flex">
-            <img src="/assets/Oracle-Logo.jpg" alt="Oracle Logo" class="company-logo me-3">
-            <div>
-              <h5 class="mb-1">Software Developer</h5>
-              <h6 class="text-muted mb-2">Oracle</h6>
-              <p>Oracle is seeking a skilled and innovative Software Developer to...</p>
-              <div class="text-muted">06-09-2023 | full-time | Bengaluru, India</div>
+            <h5>Salary</h5>
+            <div class="salary-slider">
+              <input type="range" class="form-range" id="salaryRange" min="0" max="100" value="50">
             </div>
-          </div>
-          <a href="#" class="btn apply-btn">Apply</a>
-        </div>
     
-        <!-- Job Card 3 -->
-        <div class="job-card d-flex justify-content-between align-items-center">
-          <div class="d-flex">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" class="company-logo me-3">
-            <div>
-              <h5 class="mb-1">Marketing Head</h5>
-              <h6 class="text-muted mb-2">Apple</h6>
-              <p>Apple is seeking an accomplished and visionary Marketing Head to...</p>
-              <div class="text-muted">06-09-2023 | full-time | Mumbai, India</div>
-            </div>
+            <button class="btn apply-btn mt-3">Apply Filter</button>
+            <button class="btn apply-btn mt-2">Remove Filter</button>
           </div>
-          <a href="#" class="btn apply-btn">Apply</a>
-        </div>
 
-        <!-- job card 4 -->
-        <div class="job-card d-flex justify-content-between align-items-center">
+      <!-- Job Listings Section -->
+      <div class="col-lg-6 col-md-8" style="max-height: 400px; overflow-y: auto;">
+        <div class="container d-flex flex-column align-items-center">
+          <!-- Job Card 1 -->
+          <div class="job-card d-flex justify-content-between align-items-center w-100 mb-3">
             <div class="d-flex">
-              <img src="/assets/gratis-png-microsoft-logo-icon-microsoft-icon.png" alt="Apple Logo" class="company-logo me-3">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google Logo" class="company-logo me-3">
+              <div>
+                <h5 class="mb-1" id="one">Software Engineer</h5>
+                <h6 class="text-muted mb-2">Google</h6>
+                <p>Google is seeking a talented and innovative Software Engineer to...</p>
+                <div class="text-muted">06-09-2023 | internship | Bengaluru, India</div>
+              </div>
+            </div>
+            <a href="#" class="btn apply-btn">Apply</a>
+          </div>
+      
+          <!-- Job Card 2 -->
+          <div class="job-card d-flex justify-content-between align-items-center w-100 mb-3">
+            <div class="d-flex">
+              <img src="/assets/Oracle-Logo.jpg" alt="Oracle Logo" class="company-logo me-3">
+              <div>
+                <h5 class="mb-1">Software Developer</h5>
+                <h6 class="text-muted mb-2">Oracle</h6>
+                <p>Oracle is seeking a skilled and innovative Software Developer to...</p>
+                <div class="text-muted">06-09-2023 | full-time | Bengaluru, India</div>
+              </div>
+            </div>
+            <a href="#" class="btn apply-btn">Apply</a>
+          </div>
+      
+          <!-- Job Card 3 -->
+          <div class="job-card d-flex justify-content-between align-items-center w-100 mb-3">
+            <div class="d-flex">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple Logo" class="company-logo me-3">
+              <div>
+                <h5 class="mb-1">Marketing Head</h5>
+                <h6 class="text-muted mb-2">Apple</h6>
+                <p>Apple is seeking an accomplished and visionary Marketing Head to...</p>
+                <div class="text-muted">06-09-2023 | full-time | Mumbai, India</div>
+              </div>
+            </div>
+            <a href="#" class="btn apply-btn">Apply</a>
+          </div>
+      
+          <!-- Job Card 4 -->
+          <div class="job-card d-flex justify-content-between align-items-center w-100 mb-3">
+            <div class="d-flex">
+              <img src="/assets/gratis-png-microsoft-logo-icon-microsoft-icon.png" alt="Microsoft Logo" class="company-logo me-3">
               <div>
                 <h5 class="mb-1">Software Developer</h5>
                 <h6 class="text-muted mb-2">Microsoft</h6>
@@ -103,21 +130,72 @@
             </div>
             <a href="#" class="btn apply-btn">Apply</a>
           </div>
-
-          <!-- job card 5 -->
-          <div class="job-card d-flex justify-content-between align-items-center">
-            <div class="d-flex">
-              <img src="/assets/youtube-logo-youtube-logo-transparent-youtube-icon-transparent-free-free-png.webp" alt="Apple Logo" class="company-logo me-3">
-              <div>
-                <h5 class="mb-1">Senior Software Developer</h5>
-                <h6 class="text-muted mb-2">YouTube</h6>
-                <p>YouTube is seeking an accomplished and visionary Senior Software Developer to...</p>
-                <div class="text-muted">06-09-2023 | full-time | Mumbai, India</div>
-              </div>
-            </div>
-            <a href="#" class="btn apply-btn">Apply</a>
-          </div>
+        </div>
       </div>
-    
+      
+
+    <!-- Companies Filter Section -->
+      <div class="col-lg-3 col-md-4 filter-section">
+        <h5>Companies</h5>
+        <ul class="company-list">
+          <li>Google</li>
+          <li>Apple</li>
+          <li>Paypal</li>
+          <li>Samsung</li>
+          <li>Amazon</li>
+          <li>Oracle</li>
+        </ul>
+
+        <button class="btn apply-btn mt-3">Apply Search</button>
+        <button class="btn apply-btn mt-2">Remove Search</button>
+      </div>
+    </div>
+  </div>
+
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<footer>
+  <div class="footerContainer">
+      <div class="socialIcons">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footernav">
+          <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="jobs.html">Jobs</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="">Contact</a><li>
+              <li><a href="login.html">SignIn</a></li>
+          </ul>
+      </div>
+  </div>
+  <!-- <div class="footerBottom">
+      <p>Copyright &copy;2024;<span class="designer"></span></p>
+  </div> -->
+</footer>
 </body>
 </html>
