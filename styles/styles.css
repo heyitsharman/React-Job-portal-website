@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
 :root {
     --primaryColor: #0076de;
     --whiteColor: #fff;
@@ -16,14 +16,13 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
-    font-family: 'Nunito',sans-serif;
 }
 
 /* body */
 body{
     width: 100%;
     height: auto;
-    font-family: "Heebo", sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -139,7 +138,6 @@ h1{
     font-size: 1.3rem;
     color: var(--light);
     padding: 1rem;
-    font-weight: 700;
 }
 
 .featured-card:hover{
@@ -152,13 +150,13 @@ h1{
 }
 
 .featured-btn{
-    border: 1px solid;
-    background-color: var(--blackColor);
-    border-radius: 10px;
-    padding: 3px 10px;
-    cursor: pointer;
+    padding: 10px;
+    background-color: var(--light);
     color: white;
-
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 .featured-btn:hover{
@@ -243,12 +241,14 @@ h1{
     color: hs1(36,saturation, lightness);
 }
 
+
 /* blog section */
 .blog{
     width: 100%;
     height: auto;
     text-align: center;
-    padding: 5rem 1rem;
+    padding: 3rem 1rem;
+   
 }
 
 .section-title {
@@ -269,7 +269,7 @@ h1{
 }
 
 .blog-card{
-    width: 200px;
+    width: 16.25rem;
     height: auto;
     margin: 1rem;
     box-shadow: 0 1px 6px 0 rgb(49 53 59 /12%);
@@ -305,9 +305,34 @@ h1{
     text-decoration: none;
     font-size: 1rem;
 }
-
+.blog-detail a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+}
 .blog-card:hover{
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+/* Hover Effects for Blog Section */
+
+/* Blog Card Hover Effect */
+.blog-card:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; /* Enhanced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Blog Image */
+.blog-card:hover .blog-image {
+    filter: brightness(90%); /* Dim image on hover */
+    transition: filter 0.3s ease;
+}
+
+/* Hover Effect for "Read More" Link */
+.blog-detail a:hover {
+    color: var(--yellowColor); /* Change color on hover */
+    text-decoration: underline; /* Underline effect */
+    transition: color 0.3s ease, text-decoration 0.3s ease;
 }
 
 footer{
@@ -366,15 +391,27 @@ footer{
     transition: 0.5s;
 }
 
-.footerBottom{
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
+.socialIcons a:hover {
+    transform: scale(1.1); 
+    background-color: #111;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+    font-size: 1.4rem;
 }
 
-.footerBottom p{
+.socialIcons a i:hover  {
     color: white;
+    transition: color 0.3s ease;
 }
+
+/* Footer Navigation Links Hover Effect */
+.footernav ul li a:hover {
+    text-decoration: underline;
+    transform: scale(1.7); 
+    color: white; 
+    font-size: 1.5rem;
+}
+
+
 
 .designer{
     opacity: 0.7;
@@ -393,4 +430,114 @@ footer{
       text-align: center;
       margin: 10px;
     }
+}
+
+
+.contact{
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+    margin-bottom: 5rem;
+}
+.contact-form {
+    background-color: #eeeff0; /* Form background */
+    padding: 20px;
+    width: 500px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-form h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    text-align: center;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4e4e4e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #333;
+}
+.contact-form:hover{
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.design {
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 350px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.design:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.design img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.design:hover img {
+    transform: scale(1.1);
+    filter: brightness(70%);
+}
+
+.design .info {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.design:hover .info {
+    opacity: 1;
+}
+
+.design .info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.design .info h4, .design .info p {
+    font-size: 18px;
+    margin: 5px 0;
+}
+
+.design .info p {
+    font-style: italic;
+    color: #ccc;
 }
