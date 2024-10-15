@@ -10,9 +10,6 @@ body{
     font-weight: bold;
   }
   
-  .job-card {
-}
-
 .heading{
   text-align: center;
   font-weight: bold;
@@ -45,12 +42,25 @@ body{
     color: white;
 }
 
+.filter-section ul li{
+  font-size: 1.3rem;
+}
+.filter-section ul li:hover{
+  text-decoration: underline;
+}
 .apply-btn{
   background-color: #6200EA;
   color: white;
   font-weight: bold;
 }
 
+
+
+#salaryValue {
+  color: white; /* Make it visible on black background */
+  font-size: 18px;
+  margin-left: 10px;
+}
 footer{
   background-color: #111;
 }
