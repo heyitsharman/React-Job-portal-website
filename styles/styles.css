@@ -541,3 +541,27 @@ footer{
     font-style: italic;
     color: #ccc;
 }
+
+@media (max-width: 768px) {
+    .contact {
+      flex-direction: column;
+    }
+  
+    .contact-form,
+    .design {
+      width: 100%;
+      padding: 10px;
+    }
+  
+    .design {
+      margin-top: 20px;
+    }
+  
+    .design img {
+      margin-bottom: 20px;
+    }
+  
+    .design .info {
+      text-align: center;
+    }
+  }

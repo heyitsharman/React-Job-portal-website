@@ -1,5 +1,7 @@
+
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow-x: hidden;
 }
 
 .navbar-dark {
@@ -14,6 +16,9 @@ body{
   text-align: center;
   font-weight: bold;
   color: #5A5A5A;
+}
+.category-list li{
+  list-style: none;
 }
 .job-card {
     border: 1px solid #e0e0e0;
@@ -54,15 +59,19 @@ body{
   font-weight: bold;
 }
 
-
-
 #salaryValue {
   color: white; /* Make it visible on black background */
   font-size: 18px;
   margin-left: 10px;
 }
+
+
 footer{
   background-color: #111;
+  width: 100vw;
+  margin-top: 4rem;
+  position: relative;
+  right: 4rem;
 }
 .footerContainer{
   width: 100%;
@@ -117,32 +126,24 @@ footer{
   transition: 0.5s;
 }
 
-.footerBottom{
-  background-color: #000;
-  padding: 20px;
-  text-align: center;
+.socialIcons a:hover {
+  transform: scale(1.1); 
+  background-color: #111;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+  font-size: 1.4rem;
 }
 
-.footerBottom p{
+.socialIcons a i:hover  {
   color: white;
+  transition: color 0.3s ease;
 }
 
-.designer{
-  opacity: 0.7;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 400;
-  margin: 0px 5px;
+/* Footer Navigation Links Hover Effect */
+.footernav ul li a:hover {
+  text-decoration: underline;
+  transform: scale(1.7); 
+  color: white; 
+  font-size: 1.5rem;
 }
 
-@media(max-width: 700px){
-  .footernav ul{
-      flex-direction: column;
-  }
-  .footernav ul li{
-    width: 100%;  
-    text-align: center;
-    margin: 10px;
-  }
-}
 
