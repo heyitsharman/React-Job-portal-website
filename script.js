@@ -1,44 +1,170 @@
+const filter = document.querySelector(".filter-sub");
+const main = document.querySelector("main");
+const clear = document.querySelector(".clear");
+const header = document.querySelector("header");
 
-// Wait for the document to load
-document.addEventListener('DOMContentLoaded', () => {
-  // Get all checkboxes and job cards
-  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  const jobCards = document.querySelectorAll('.job-card');
+let closes = [];
+let arr = [];
 
-  // Listen for changes in the checkboxes
-  checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener('change', filterJobs);
-  });
+(async function () {
+  let res = await fetch("./data.json");
+  let data = await res.json();
 
-  function filterJobs() {
-    const selectedCategories = Array.from(checkboxes) // Convert NodeList to Array
-      .filter((checkbox) => checkbox.checked) // Get only the checked checkboxes
-      .map((checkbox) => checkbox.value); // Extract their values
+  for (let curr of data) {
+    const container = document.createElement("div");
+    container.classList.add("container");
+    container.innerHTML = `
+      <img src="${curr.logo}" alt="logo" />
+      <div class="head">
+        <div class="wrapper">
+          <div class="top">
+            <h2>${curr.company}</h2>
+            <div class="stat"></div>
+          </div>
+          <a href="#">${curr.position}</a>
+          <ul class="availability">
+            <li>${curr.postedAt}</li>
+            <li>${curr.contract}</li>
+            <li>${curr.location}</li>
+          </ul>
+        </div>
+        <hr />
+        <div class="tags"></div>
+      </div>
+    `;
 
-    // If no checkbox is selected, show all jobs
-    if (selectedCategories.length === 0) {
-      jobCards.forEach((jobCard) => jobCard.style.display = 'flex');
-      return;
+    if (curr.new) {
+      const span = document.createElement("span");
+      span.classList.add("new");
+      span.textContent = "New!";
+      container.querySelector(".stat").append(span);
     }
 
-    // Filter job cards based on selected categories
-    jobCards.forEach((jobCard) => {
-      // Get the job type from the text content
-      const jobType = jobCard.querySelector('.text-muted').textContent.toLowerCase();
+    if (curr.featured) {
+      container.classList.add("featured");
+      const span = document.createElement("span");
+      span.classList.add("feature");
+      span.textContent = "Featured";
+      container.querySelector(".stat").append(span);
+    }
 
-      // Match against selected categories
-      const matches = selectedCategories.some((category) => jobType.includes(category));
+    let types = curr.position.split(" ");
 
-      // Show or hide the job card
-      jobCard.style.display = matches ? 'flex' : 'none';
-    });
+    const btn1 = document.createElement("button");
+    btn1.dataset.type = curr.role;
+    btn1.textContent = curr.role;
+    container.querySelector(".tags").appendChild(btn1);
+
+    const btn2 = document.createElement("button");
+    btn2.dataset.type = curr.level;
+    btn2.textContent = curr.level;
+    container.querySelector(".tags").appendChild(btn2);
+
+    for (let l of curr.languages) {
+      const btn = document.createElement("button");
+      btn.dataset.type = l;
+      btn.textContent = l;
+      container.querySelector(".tags").appendChild(btn);
+    }
+
+    for (let t of curr.tools) {
+      const btn = document.createElement("button");
+      btn.dataset.type = t;
+      btn.textContent = t;
+      container.querySelector(".tags").appendChild(btn);
+    }
+
+    main.appendChild(container);
   }
 
-  // Reset filter and show all jobs when "Remove Filter" button is clicked
-  document.querySelector('.apply-btn').addEventListener('click', () => {
-    checkboxes.forEach((checkbox) => (checkbox.checked = false));
-    jobCards.forEach((jobCard) => jobCard.style.display = 'flex');
+  const buttons = main.querySelectorAll(".tags button");
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+      filterType(button.dataset.type);
+      updateContainer();
+    });
   });
+})();
+
+clear.addEventListener("click", () => {
+  arr = [];
+  filter.innerHTML = "";
+  main
+    .querySelectorAll(".container")
+    .forEach((container) => container.classList.remove("remove"));
+  filter.closest(".filter").style.display = "none";
 });
 
+function addFilter() {
+  filter.innerHTML = "";
+  for (let i of arr) {
+    const el = document.createElement("div");
+    el.classList.add("span");
+    el.innerHTML = `
+      <p>${i}</p>
+      <button aria-label="remove button">
+        <img src="assets/icon-remove.svg" alt="remove" />
+      </button>
+    `;
+    filter.appendChild(el);
+    filter.closest(".filter").style.display = "flex";
 
+    closes = [];
+    closes.push(el.querySelector("button"));
+    closes.forEach((close) => {
+      close.addEventListener("click", () => {
+        filter.removeChild(close.closest(".span"));
+        arr.splice(arr.indexOf(close.previousElementSibling.textContent), 1);
+        updateContainer();
+        if (filter.innerHTML) {
+          filter.closest(".filter").style.display = "flex";
+        } else {
+          filter.closest(".filter").style.display = "none";
+        }
+      });
+    });
+  }
+}
+
+function filterType(type) {
+  if (!arr.includes(type)) {
+    arr.push(type);
+    addFilter();
+  }
+}
+
+function updateContainer() {
+  const containers = main.querySelectorAll(".container");
+  containers.forEach((container) => {
+    const buttons = container.querySelectorAll("button");
+    let check = [];
+    for (let i of buttons) {
+      check.push(i.dataset.type);
+    }
+
+    let include = true;
+    for (let j of arr) {
+      if (!check.includes(j)) {
+        include = false;
+      }
+    }
+
+    if (!include) {
+      container.classList.add("remove");
+    } else {
+      container.classList.remove("remove");
+    }
+  });
+}
+
+function changeBg() {
+  if (document.body.clientWidth < 700) {
+    header.style["background-image"] = "url(images/bg-header-mobile.svg)";
+  } else {
+    header.style["background-image"] = "url(images/bg-header-desktop.svg)";
+  }
+}
+
+changeBg();
+
+window.onresize = changeBg;

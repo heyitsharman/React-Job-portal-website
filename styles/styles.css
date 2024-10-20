@@ -7,7 +7,14 @@
     --labelColor: #64b1f5;
     --yellowColor: #ffd723;
     --dark: #2B3940;
-    --light: #5A5A5A; /* Example color code */
+    --light: #5A5A5A;
+    --dark-cyan: hsl(180, 29%, 50%);
+    --bg-cyan: hsl(180, 52%, 96%);
+    --filter-cyan: hsl(180, 31%, 95%);
+    --dark-gray-cyan: hsl(180, 8%, 52%);
+    --very-dark-cyan: hsl(180, 14%, 20%);
+
+    --shadow: 0 5px 30px 10px hsl(180, 29%, 50%, .2);
     ;
 }
 
@@ -34,11 +41,12 @@ h1{
 
 .navbar-dark {
     background: rgb(3 7 18); 
-  }
-.navbar-brand {
-    font-size: 2rem;
-    font-weight: bold;
 }
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
 /* join bannner */
 .join{
     width: 100%;
